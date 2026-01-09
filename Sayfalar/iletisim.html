@@ -1,61 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>İletişim</title>
+    <link rel="stylesheet" type="text/css" href="../stil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>İletişim Bilgileri</h1>
-<ul>
-	<li><b>E-Posta:</b>zeynepcerentupsuz0606@gmail.com</li>
-	<li><b>Telefon:</b>+90 (505) 064 23 24</li>
-	<li><b>Adres:</b>Bursa, Türkiye</li>
-</ul>
-<p>Aşağıdaki butona tıklayarak direkt olarak bana email gönderebilirsiniz:</p>
-<p><a href="mailto:zeynepcerentupsuz0606@gmail.com">Email Gönder</a></p>
-<p><a href="../index.html">Anasayfa</a></p>
-<h1>İletişim Formu</h1>
-    <form action="iletisimformu.php" method="post"></form>
-    <p>İletişim sağlamak için aşağıdaki formu doldurunuz.</p>
-    <fieldset>
-        <legend>Kişisel Bilgiler</legend>
-    <label for="name">Adınız:</label>
-    <input type="text" id="name" required>
-    <p></p>
-    <label for="surname">Soyadınız:</label>
-    <input type="text" id="surname" required>
-    <p>Cinsiyetiniz:</p>
-    <input type="radio" name="cinsiyet" id="cinsiyet">
-    <label for="cinsiyet">Kadın</label>
-    <input type="radio" name="cinsiyet" id="cinsiyet">
-    <label for="cinsiyet">Erkek</label>
-    <input type="radio" name="cinsiyet" id="cinsiyet">
-    <label for="cinsiyet">Belirtmek İstemiyorum</label>
-    </fieldset>
-    <p></p>
-    <p></p>
-    <fieldset>
-        <legend>Mesaj Bilgileri</legend>
-    <p></p>
-    <label for="eposta">E-posta:</label>
-    <input type="email" id="eposta" required>
-    <p>Mesajınızı Yazınız:</p>
-    <textarea name="mesaj" id="mesaj" cols="30" rows="4" 
-    placeholder="Mesaj" maxlength="500"></textarea>
-    <p>Mesaj İçeriği</p>
-    <select name="veri">
-        <option value="destek">Destek</option>
-        <option value="teklif">Teklif</option>
-        <option value="diğer">Şikayet</option>
-    </select>
-    <p></p>
-    <label for="file">Dosya Yükleyebilirsiniz</label>
-    <p></p>
-    <input type="file" name="file" id="file">
-    </fieldset>
-    <p></p>
-    <button type="submit">Gönder</button>
-    <button type="reset">Temizle</button>
+    <header class="glass-header">
+        <nav class="container">
+            <div class="brand-text">Zeynep Ceren Tüpsüz<span></span></div>
+            <div class="nav-links">
+                <a href="../index.html">Anasayfa</a>
+                <a href="../hakkimda.html">Hakkımda</a>
+                <a href="projeler.html">Projeler</a>
+                <a href="iletisim.html" class="active">İletişim</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container page-content">
+        <section class="contact-hero">
+            <h1>İletişime Geçin</h1>
+            <p class="intro-text">Yeni bir proje veya iş birliği için benimle her zaman iletişime geçebilirsiniz.</p>
+        </section>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <div class="info-details">
+                        <h3>E-Posta</h3>
+                        <p>zeynepcerentupsuz0606@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div class="info-details">
+                        <h3>Telefon</h3>
+                        <p>+90 (505) 064 23 24</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div class="info-details">
+                        <h3>Adres</h3>
+                        <p>Bursa, Türkiye</p>
+                    </div>
+                </div>
+                <a href="mailto:zeynepcerentupsuz0606@gmail.com" class="btn-main full-width">Direkt Email Gönder</a>
+            </div>
+            <div class="contact-form-wrapper">
+                <form action="iletisimformu.php" method="post" class="styled-form">
+                    <fieldset>
+                        <legend>Kişisel Bilgiler</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Adınız</label>
+                                <input type="text" id="name" placeholder="Adınız" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="surname">Soyadınız</label>
+                                <input type="text" id="surname" placeholder="Soyadınız" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Cinsiyetiniz</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="cinsiyet" value="kadın"> Kadın</label>
+                                <label><input type="radio" name="cinsiyet" value="erkek"> Erkek</label>
+                                <label><input type="radio" name="cinsiyet" value="belirtilmedi"> Belirtmek İstemiyorum</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Mesaj Detayları</legend>
+                        <div class="form-group">
+                            <label for="eposta">E-posta Adresiniz</label>
+                            <input type="email" id="eposta" placeholder="ornek@mail.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="veri">Mesaj Konusu</label>
+                            <select name="veri">
+                                <option value="destek">Destek</option>
+                                <option value="teklif">Teklif</option>
+                                <option value="diger">Şikayet/Öneri</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mesaj">Mesajınız</label>
+                            <textarea name="mesaj" id="mesaj" rows="4" placeholder="Mesajınızı buraya yazınız..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="file" class="file-label">Dosya Yükle (Varsa)</label>
+                            <input type="file" name="file" id="file">
+                        </div>
+                    </fieldset>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-main">Gönder</button>
+                        <button type="reset" class="btn-outline">Temizle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap container">
+            <div class="footer-brand">Zeynep Ceren Tüpsüz<span></span></div>
+            <p class="copy-text">© 2026 Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
 </body>
 </html>
